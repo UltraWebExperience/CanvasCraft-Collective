@@ -1,0 +1,708 @@
+/* CSS Variables for consistent styling */
+:root {
+    --color-primary: #2D3748; /* Deep blue/charcoal for main elements, text */
+    --color-accent: #38B2AC; /* Teal for CTAs, highlights */
+    --color-light-bg: #F8F9FA; /* Very light grey for section backgrounds */
+    --color-white: #FFFFFF;
+    --color-text-dark: #333333;
+    --color-text-medium: #666666;
+    --color-text-light: #999999;
+    --shadow-subtle: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --shadow-strong: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --border-radius-soft: 8px;
+}
+
+/* Basic Resets & Global Styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Primary body font */
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    overflow-x: hidden;
+    background-color: var(--color-light-bg); /* Default light background */
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-accent);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: darken(var(--color-accent), 10%); /* Darken on hover */
+}
+
+/* Container for Content Width */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px; /* Generous padding on sides */
+}
+
+/* Section Titles */
+.section-title {
+    font-family: 'Poppins', sans-serif; /* Poppins for headings */
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 1.15rem;
+    color: var(--color-text-medium);
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.section-title-left { /* For sections with image/text split */
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: left;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+
+/* Buttons */
+.btn {
+    padding: 14px 28px;
+    border-radius: var(--border-radius-soft);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    display: inline-flex; /* Use flex to align icon/text if needed */
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    box-shadow: var(--shadow-subtle);
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--color-accent), 10%); /* Darken accent on hover */
+    box-shadow: var(--shadow-strong);
+    transform: translateY(-2px);
+}
+
+.btn-dark { /* For select buttons in pricing */
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: var(--shadow-subtle);
+}
+
+.btn-dark:hover {
+    background-color: lighten(var(--color-primary), 10%); /* Slightly lighten dark on hover */
+    box-shadow: var(--shadow-strong);
+    transform: translateY(-2px);
+}
+
+.btn-primary-outline {
+    background-color: transparent;
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    padding: 12px 26px; /* Adjust padding for border */
+}
+
+.btn-primary-outline:hover {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.btn-secondary-link {
+    background: none;
+    border: none;
+    color: var(--color-white);
+    text-decoration: underline;
+    font-weight: 400;
+    padding: 10px 0;
+    font-size: 1.05rem;
+}
+
+.btn-secondary-link:hover {
+    color: var(--color-light-bg);
+    text-decoration: none;
+}
+
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white); /* Solid white background for navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    padding: 15px 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand .logo-img {
+    height: 35px; /* Adjust logo size */
+    margin-right: 10px;
+    width: auto;
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-grow: 1; /* Allow nav to take available space */
+    justify-content: center; /* Center the links */
+}
+
+.navbar-nav li {
+    margin: 0 20px;
+}
+
+.navbar-nav a {
+    color: var(--color-text-medium);
+    font-weight: 600;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+}
+
+.navbar-nav a:hover {
+    color: var(--color-accent);
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    /* CHANGE THIS LINE: */
+    background: url('images/hero_background.jpg') no-repeat center center/cover;
+    /* END CHANGE */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.hero-section::before { /* Dark overlay for text contrast */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% opacity black */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 100px 0;
+    background-color: var(--color-light-bg); /* Consistent light background */
+    text-align: center;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    align-items: flex-end; /* Align cards at the bottom if heights differ */
+}
+
+.pricing-card {
+    background-color: var(--color-white);
+    padding: 40px;
+    border-radius: var(--border-radius-soft);
+    box-shadow: var(--shadow-subtle); /* Subtle shadow for all cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%; /* Ensure cards stretch to fill grid height */
+    box-sizing: border-box; /* Include padding in height */
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-strong);
+}
+
+.pricing-card.best-value {
+    transform: translateY(-10px); /* Lift for best value */
+    box-shadow: 0 10px 30px rgba(56, 178, 172, 0.25), var(--shadow-strong); /* Accent-colored glow */
+    border: 2px solid var(--color-accent); /* Accent border */
+    padding: 38px; /* Adjust padding for border */
+}
+
+.pricing-card.best-value:hover {
+    transform: translateY(-12px); /* Slightly more lift on hover */
+    box-shadow: 0 12px 35px rgba(56, 178, 172, 0.35), var(--shadow-strong);
+}
+
+.pricing-card .badge {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    padding: 8px 15px;
+    border-radius: 50px; /* Pill shape */
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.pricing-card .plan-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.pricing-card .price {
+    font-family: 'Inter', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+
+.pricing-card .price-per {
+    font-size: 1.1rem;
+    color: var(--color-text-medium);
+    margin-bottom: 30px;
+}
+
+.pricing-card .features-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+    text-align: left;
+    width: 100%; /* Ensure list takes full width for alignment */
+}
+
+.pricing-card .features-list li {
+    font-size: 1rem;
+    color: var(--color-text-dark);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.pricing-card .features-list li i {
+    color: var(--color-accent);
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.pricing-card .btn {
+    width: 80%; /* Make buttons wider */
+    padding: 15px 0;
+    margin-top: auto; /* Push button to bottom if card height varies */
+}
+
+/* Trust Badges Section */
+.trust-badges-section {
+    padding: 60px 0;
+    background-color: var(--color-white);
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.03); /* Subtle shadow above */
+}
+
+.trust-badge-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px; /* Space between badges */
+}
+
+.trust-badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-primary);
+}
+
+.trust-badge-item .trust-icon {
+    font-size: 3rem;
+    color: var(--color-accent);
+    margin-bottom: 15px;
+}
+
+.trust-badge-item p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Features Section */
+.features-section {
+    padding: 100px 0;
+    background-color: var(--color-light-bg);
+}
+
+.features-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px; /* Space between image and text */
+}
+
+.features-image-container {
+    flex: 1; /* Take up half the space */
+    max-width: 50%; /* Max width for image container */
+    padding: 20px; /* Padding around image, like a frame */
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-soft);
+    box-shadow: var(--shadow-subtle);
+    display: flex; /* For centering image inside */
+    justify-content: center;
+    align-items: center;
+}
+
+.features-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-soft); /* Match container radius */
+    display: block; /* Remove extra space below image */
+}
+
+.features-text-container {
+    flex: 1; /* Take up half the space */
+    max-width: 50%;
+    text-align: left;
+}
+
+.features-list-large {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-list-large li {
+    font-size: 1.15rem;
+    color: var(--color-text-dark);
+    margin-bottom: 25px;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start; /* Align text to top if multiple lines */
+}
+
+.features-list-large li .icon-bullet {
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    margin-right: 15px;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    padding-top: 2px; /* Slight vertical adjust */
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 100px 0;
+    background-color: var(--color-white);
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+}
+
+.contact-item .contact-icon {
+    font-size: 1.8rem;
+    color: var(--color-accent);
+    margin-right: 15px;
+}
+
+.contact-item a {
+    color: var(--color-primary); /* Keep links primary color */
+    font-weight: 600;
+}
+.contact-item a:hover {
+    color: var(--color-accent);
+}
+
+/* Optional Contact Form Styling (uncomment in HTML to use) */
+/*
+.contact-form-placeholder {
+    max-width: 600px;
+    margin: 60px auto 0;
+    padding: 30px;
+    background-color: var(--color-light-bg);
+    border-radius: var(--border-radius-soft);
+    box-shadow: var(--shadow-subtle);
+    text-align: left;
+}
+
+.contact-form-placeholder h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact-form-placeholder form input[type="text"],
+.contact-form-placeholder form input[type="email"],
+.contact-form-placeholder form textarea {
+    width: calc(100% - 20px);
+    padding: 15px 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+.contact-form-placeholder form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form-placeholder form .btn-primary {
+    width: 100%;
+    padding: 18px;
+    font-size: 1.1rem;
+}
+*/
+
+/* Footer */
+.footer {
+    background-color: var(--color-primary); /* Dark footer for contrast */
+    color: var(--color-white);
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-accent);
+}
+
+/* Utility for lightening/darkening colors - SASS-like functions (manual adjustment) */
+/* Not actual SASS, just for conceptual use - you'd manually adjust the colors */
+/* function darken(color, percent) {
+    // Implement actual darkening logic for hex or RGB
+}
+function lighten(color, percent) {
+    // Implement actual lightening logic for hex or RGB
+}
+*/
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+    .section-title-left {
+        font-size: 2rem;
+    }
+
+    /* Navbar */
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    .navbar-brand .logo-img {
+        height: 30px;
+    }
+    .navbar-nav {
+        display: none; /* Hide for mobile menu toggle (would need JS) */
+    }
+    .navbar .btn-primary-outline {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Hero */
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    .hero-actions {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Pricing */
+    .pricing-grid {
+        grid-template-columns: 1fr; /* Stack on small screens */
+        gap: 40px;
+    }
+    .pricing-card.best-value {
+        transform: translateY(0); /* Remove lift on mobile */
+        box-shadow: var(--shadow-subtle);
+        border: 2px solid var(--color-accent);
+    }
+    .pricing-card.best-value:hover {
+        transform: translateY(-5px); /* Only slight lift on hover for mobile */
+        box-shadow: var(--shadow-strong);
+    }
+
+    /* Trust Badges */
+    .trust-badge-grid {
+        gap: 30px;
+    }
+
+    /* Features */
+    .features-content {
+        flex-direction: column; /* Stack image and text */
+        gap: 40px;
+    }
+    .features-image-container,
+    .features-text-container {
+        max-width: 100%; /* Take full width */
+    }
+    .features-text-container {
+        text-align: center; /* Center text when stacked */
+    }
+    .features-list-large {
+        text-align: left; /* Keep list items left-aligned */
+        padding-left: 10px; /* Adjust if needed */
+    }
+
+    /* Contact */
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Footer */
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+    .section-title-left {
+        font-size: 1.8rem;
+    }
+
+    /* Hero */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    /* Pricing */
+    .pricing-card {
+        padding: 30px;
+    }
+    .pricing-card .price {
+        font-size: 3rem;
+    }
+    .pricing-card .plan-title {
+        font-size: 1.5rem;
+    }
+}
