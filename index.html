@@ -3,148 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas - Your Ideas, Unleashed</title>
+    <meta name="description" content="Buy canvapro at an afordable price .">
+    <meta name="robots" content="index, follow">
+    <meta name="CGX" content="CGX">
+    <title>CanvasPro | Premium Canvas Subscriptions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="container">
-            <a href="#" class="navbar-brand">
-                <img src="images/canvas_logo.png" alt="Canvas Logo" class="logo-img"> Canvas
-            </a>
-            <ul class="navbar-nav">
-                <li><a href="#plans">Plans</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="#plans" class="btn btn-primary-outline">Get Started</a>
+        <div class="container navbar-container">
+            <a href="#" class="logo">CanvasPro</a>
+            <div class="nav-links">
+                <a href="#pricing">Plans</a>
+                <a href="#features">Features</a>
+                <a href="#testimonials">Testimonials</a>
+            </div>
+            <a href="#pricing" class="btn btn-primary">Get Started</a>
         </div>
     </nav>
 
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1>Professional Canvases, Delivered Your Way</h1>
-            <p>Choose a plan that fits your workflow. Cancel anytime.</p>
-            <div class="hero-actions">
-                <a href="#plans" class="btn btn-primary">View Plans</a>
-                <a href="tel:[2347050319910]" class="btn btn-secondary-link">Need help? Call [2347050319910]</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title">Premium Canvases, Delivered On Your Schedule</h1>
+            <p class="hero-subtitle">Subscribe and save. Cancel anytime.</p>
+            <div class="hero-buttons">
+                <a href="#pricing" class="btn btn-primary">View Plans</a>
+                <a href="tel:+2347050319910" class="hero-secondary-btn">
+                    <i class="fas fa-phone"></i> Need help? Call +234 705 031 9910
+                </a>
             </div>
         </div>
     </section>
 
-    <section id="plans" class="pricing-section">
+    <!-- Pricing Section -->
+    <section id="pricing" class="section">
         <div class="container">
-            <h2 class="section-title">Simple Plans, Limitless Potential</h2>
-            <p class="section-subtitle">Find the perfect Canvas subscription for your creative needs.</p>
-
-            <div class="pricing-grid">
-                <div class="pricing-card">
+            <h2 class="section-title">Choose Your Plan</h2>
+            <p class="section-subtitle">Flexible options for every need. Cancel anytime.</p>
+            
+            <div class="plans">
+                <!-- Weekly Plan -->
+                <div class="plan">
                     <h3 class="plan-title">Weekly</h3>
-                    <p class="price">₦1,000</p>
-                    <p class="price-per">Per canvas</p>
-                    <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> High-quality materials</li>
-                        <li><i class="fas fa-check-circle"></i> Ideal for short projects</li>
-                        <li><i class="fas fa-check-circle"></i> Flexible commitment</li>
+                    <div class="price">₦1,000 <small>/week</small></div>
+                    <div class="savings">₦1,000 per canvas</div>
+                    <ul class="features">
+                        <li>1 premium canvas per week</li>
+                        <li>Free nationwide shipping</li>
+                        <li>No long-term commitment</li>
+                        <li>Pause or cancel anytime</li>
                     </ul>
-                    <a href="#" class="btn btn-dark">Select</a>
+                    <a href="#" class="btn btn-outline">Select Plan</a>
                 </div>
-
-                <div class="pricing-card best-value">
-                    <span class="badge">BEST VALUE</span>
+                
+                <!-- Monthly Plan (Popular) -->
+                <div class="plan popular-plan">
+                    <span class="badge">Most Popular</span>
                     <h3 class="plan-title">Monthly</h3>
-                    <p class="price">₦5,000</p>
-                    <p class="price-per">Per month</p>
-                    <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> All Weekly features</li>
-                        <li><i class="fas fa-check-circle"></i> Consistent creative access</li>
-                        <li><i class="fas fa-check-circle"></i> **15% Savings** vs. Weekly</li>
+                    <div class="price">₦5,000 <small>/month</small></div>
+                    <div class="savings">Save 15% (₦1,250 per canvas)</div>
+                    <ul class="features">
+                        <li>4 canvases per month</li>
+                        <li>Free nationwide shipping</li>
+                        <li>Priority customer support</li>
+                        <li>Pause or cancel anytime</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Select</a>
+                    <a href="#" class="btn btn-primary">Get Started</a>
                 </div>
-
-                <div class="pricing-card">
+                
+                <!-- Yearly Plan (Best Value) -->
+                <div class="plan">
+                    <span class="badge">Best Value</span>
                     <h3 class="plan-title">Yearly</h3>
-                    <p class="price">₦60,000</p>
-                    <p class="price-per">Per year</p>
+                    <div class="price">₦60,000 <small>/year</small></div>
+                    <div class="savings">Save ₦12,000 (₦1,042 per canvas)</div>
+                    <ul class="features">
+                        <li>48 canvases per year</li>
+                        <li>Free nationwide shipping</li>
+                        <li>24/7 priority support</li>
+                        <li>Exclusive designs access</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Select Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose CanvasPro?</h2>
+            <p class="section-subtitle">We're committed to providing the best canvas experience</p>
+            
+            <div class="features-container">
+                <div class="features-image">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Premium Canvas">
+                </div>
+                <div class="features-content">
                     <ul class="features-list">
-                        <li><i class="fas fa-check-circle"></i> All Monthly features</li>
-                        <li><i class="fas fa-check-circle"></i> Max savings for dedicated creators</li>
-                        <li><i class="fas fa-check-circle"></i> **20% Savings** vs. Monthly</li>
-                    </ul>
-                    <a href="#" class="btn btn-dark">Select</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="trust-badges-section">
-        <div class="container">
-            <div class="trust-badge-grid">
-                <div class="trust-badge-item">
-                    <i class="fas fa-truck trust-icon"></i>
-                    <p>Free Shipping</p>
-                </div>
-                <div class="trust-badge-item">
-                    <i class="fas fa-headset trust-icon"></i>
-                    <p>24/7 Support</p>
-                </div>
-                <div class="trust-badge-item">
-                    <i class="fas fa-lock trust-icon"></i>
-                    <p>Secure Payments</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="features" class="features-section">
-        <div class="container">
-            <div class="features-content">
-                <div class="features-image-container">
-                    <img src="images/features_image.jpg" alt="Creative Workspace" class="features-image">
-                </div>
-                <div class="features-text-container">
-                    <h2 class="section-title-left">Why Canvas? Elevate Your Creative Process</h2>
-                    <ul class="features-list-large">
-                        <li><i class="fas fa-palette icon-bullet"></i> **Premium Materials:** Experience unparalleled quality with every canvas.</li>
-                        <li><i class="fas fa-truck-fast icon-bullet"></i> **Flexible Delivery:** Get your supplies exactly when you need them, where you need them.</li>
-                        <li><i class="fas fa-file-contract icon-bullet"></i> **No Contracts, No Hassle:** Enjoy complete freedom with our flexible subscription model.</li>
-                        <li><i class="fas fa-lightbulb icon-bullet"></i> **Inspiration Hub:** Access exclusive tutorials, tips, and a vibrant creator community.</li>
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Premium Quality</h3>
+                                <p>Gallery-grade cotton canvases stretched on durable pine frames. Perfect for professional artists and hobbyists alike.</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Free Shipping</h3>
+                                <p>Free nationwide delivery on all orders. Fast and reliable shipping to your doorstep.</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Flexible Scheduling</h3>
+                                <p>Skip, pause, or cancel shipments anytime. You're in complete control of your subscription.</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>24/7 Support</h3>
+                                <p>Our customer service team is available round the clock to assist you with any questions.</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Connect with Canvas</h2>
-            <p class="section-subtitle">We're here to help you get started or answer any questions.</p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt contact-icon"></i>
-                    <p>Phone: <a href="tel:[2347050319910]">[2347050319910]</a></p>
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+        <div class="container badges-container">
+            <div class="badge-item">
+                <div class="badge-icon">
+                    <i class="fas fa-lock"></i>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope contact-icon"></i>
-                    <p>Email: <a href="mailto:codingandgraphicsexperys@gmail.com">codingandgraphicsexperys@gmail.com</a></p>
+                <div>
+                    <h3>Secure Payments</h3>
+                    <p>100% protected transactions</p>
                 </div>
             </div>
+            <div class="badge-item">
+                <div class="badge-icon">
+                    <i class="fas fa-undo"></i>
+                </div>
+                <div>
+                    <h3>Easy Returns</h3>
+                    <p>30-day satisfaction guarantee</p>
+                </div>
             </div>
+            <div class="badge-item">
+                <div class="badge-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div>
+                    <h3>5-Star Reviews</h3>
+                    <p>Trusted by 1,000+ artists</p>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Testimonials -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Don't just take our word for it</p>
+            
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <p class="testimonial-content">
+                        "The quality of these canvases is unmatched! I've been using CanvasPro for my gallery work and the yearly subscription saved me ₦12,000 last year alone."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Amina Bello</h4>
+                            <p>Professional Artist, Lagos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-content">
+                        "Customer service solved my delivery issue in 5 minutes. I'm impressed with how quickly they respond and resolve problems."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Tunde Okafor</h4>
+                            <p>Art Teacher, Abuja</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-content">
+                        "As a student, the monthly plan gives me affordable access to quality materials."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Chioma Eze</h4>
+                            <p>Fine Arts Student, Enugu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Canvas. All rights reserved.</p>
-            <ul class="footer-links">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-            </ul>
+            <div class="footer-container">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">CanvasPro</a>
+                    <p>Premium canvas subscriptions for artists of all levels. Quality materials delivered to your door.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +234 705 031 9910</li>
+                        <li><i class="fas fa-envelope"></i> codingandgraphicsexperys@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 CanvasPro. All rights reserved.</p>
+            </div>
         </div>
     </footer>
-
 </body>
 </html>
